@@ -139,3 +139,7 @@ label {
 .loser {
     color: rgb(219, 62, 62);
 }
+
+#overtime {
+    display: none;
+}

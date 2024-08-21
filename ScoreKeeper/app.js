@@ -5,7 +5,7 @@ const score = document.querySelector("#score");
 const plOneSpan = document.querySelector("#one");
 const plTwoSpan = document.querySelector("#two");
 const selection = document.querySelector("#playing-to");
-
+const overtime = document.querySelector("#overtime");
 let numOfGames = selection.value; 
 let plOneScore = 0;
 let plTwoScore = 0;
@@ -28,7 +28,7 @@ plTwoBtn.addEventListener('click', function() {
     numOfGames = selection.value; 
     if (matchFinished === false) {
         plTwoScore += 1;
-        
+
         plTwoSpan.innerText = plTwoScore;
         chkWinner();
     }
@@ -62,7 +62,7 @@ function chkWinner() {
     let gamesLeft = numOfGames - totalPoints;
 
     if ((Math.min(plOneScore, plTwoScore) + gamesLeft < Math.max(plOneScore, plTwoScore)) || (totalPoints >=  numOfGames)) {
-
+        overtime.style.display = "none";
         matchFinished = true;
 
         if (plOneScore > plTwoScore) {
@@ -79,6 +79,10 @@ function chkWinner() {
             plTwoSpan.classList.add("winner");
             plOneSpan.classList.add("loser");
 
+        } else {
+            numOfGames += 1;
+            overtime.style.display = "block";
+            matchFinished = false;
         }
     }
 }
