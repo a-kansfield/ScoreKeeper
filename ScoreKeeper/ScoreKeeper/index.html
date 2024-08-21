@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+     <!-- Jersey 10 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+    <!-- Josefin Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<section class="container">
+    <div id="score-box">
+        <div class="img-box">
+            <img id="pong-img" src="imgs/paddle.jpg" alt="">
+        </div>
+        <div class="text-box">
+            <h1>Ping Pong Score Keeper</h1>
+        </div>
+        <hr>
+        <div class="text-box bottom-padding">
+
+            <h2 id="score"><span id="one">0</span> to <span id="two">0</span></h2>
+            <p id="overtime">Overtime</p>
+            <label for="playing-to">Rounds</label>
+            <select name="playing-to" id="playing-to">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+
+            <div class="btn-group">
+                <button class="btn" id="first">+1 Player One</button>
+                <button class="btn" id="center">+1 Player Two</button>
+                <button class="btn" id="last">Reset</button>
+            </div>
+        </div>
+        </div>
+        
+        
+    </div>
+</section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
